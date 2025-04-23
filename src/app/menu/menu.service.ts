@@ -10,6 +10,9 @@ export class MenuService {
 
   private apiUrl = 'http://localhost:8080/api/getall';
 
+  private baseUrl = 'http://localhost:8080/api';
+
+
   constructor(private httclient:HttpClient) { }
 
 
@@ -17,6 +20,11 @@ export class MenuService {
 
     return this.httclient.get<any[]>(this.apiUrl)
     
+   }
+
+   deleteById(menu_id:number):Observable<void>{
+
+    return this.httclient.delete<void>(`${this.baseUrl}/${menu_id}`)
    }
 
   

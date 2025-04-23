@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuitemavilabiltyPipe } from './menuitemavilabilty.pipe'; // ✅ add this
 import { MenufromComponent } from './menu/menufrom/menufrom.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuitemlistComponent } from './menuitemlist/menuitemlist.component';
 
 const routes:Routes =[
 
@@ -19,7 +20,8 @@ const routes:Routes =[
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
   {path:'menu',component:MenuComponent},
-  {path:'menuform',component:MenufromComponent}
+  {path:'menuform',component:MenufromComponent},
+  {path:'Menuitemlist/:id',component:MenuitemlistComponent}
 ]
 
 @NgModule({
@@ -30,7 +32,8 @@ const routes:Routes =[
     ContactComponent,
     MenuComponent,
     MenuitemavilabiltyPipe,
-    MenufromComponent
+    MenufromComponent,
+    MenuitemlistComponent
   ],
   imports: [
     BrowserModule,
