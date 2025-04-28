@@ -4,6 +4,7 @@
     
     <div class="menu-card" *ngFor="let item of menu">
       <div class="menu-card-header">
+       
         <h3>{{ item.name }}</h3> 
       </div>
       <div class="menu-card-body">
@@ -12,8 +13,11 @@
       <div class="menu-card-body">
         <p>{{ item.available | menuitemavilabilty }}</p> 
       </div>
-      <div class="menu-card-footer">
-        <button class="menu-card-button">Add to Cart</button>
+      <button (click)="deletemenu(item.menu_id)">deletemenu</button>
+      <h1>{{item.menu_id}}</h1>
+      <div>
+        <button (click)="idpass(item.menu_id)">click to view </button>
+
       </div>
     </div>
   </div>
