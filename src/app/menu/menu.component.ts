@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuService } from './menu.service';
 import { Router } from '@angular/router';
 
@@ -12,8 +12,6 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit{
 
   menu: any[] = [];
-
-
 
 constructor(private menuservice:MenuService,private router:Router){}
 
@@ -53,5 +51,9 @@ idpass(menu_id:number){
    this.router.navigate(['/Menuitemlist',menu_id])
 
 }
+
+
+
+
 
 }
